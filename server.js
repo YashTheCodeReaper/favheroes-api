@@ -19,7 +19,7 @@ dbConnection.connect((error) => {
 });
 
 // Creating server
-app.listen(3000, () => {
+app.listen(3000, "0.0.0.0", () => {
   console.log("server created at port: " + 3000);
 });
 

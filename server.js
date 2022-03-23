@@ -2,6 +2,7 @@ const app = require("./app");
 const mysql2 = require("mysql2");
 const axios = require("axios");
 const { application } = require("express");
+const port = process.env.PORT || 3000;
 
 // Database connection params
 const dbConnection = mysql2.createConnection({
@@ -19,7 +20,7 @@ dbConnection.connect((error) => {
 });
 
 // Creating server
-app.listen(3000, "0.0.0.0", () => {
+app.listen(port, () => {
   console.log("server created at port: " + 3000);
 });
 
